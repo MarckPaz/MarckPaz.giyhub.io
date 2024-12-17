@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Monsesita ❤️</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(120deg, #ffe4e1, #fff5e6);
+            color: #333;
+        }
+
+        .encabezado {
+            background-color: #ffb3b3;
+            text-align: center;
+            padding: 20px;
+            color: #fff;
+            border-bottom: 4px solid #ff4d4d;
+        }
+
+        .encabezado h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+
+        .contenedor {
+            padding: 20px;
+        }
+
+        .cuento {
+            background-color: #fef7e6;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 600px;
+        }
+
+        .cuento h2 {
+            color: #ff6666;
+        }
+
+        .cuento p {
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+
+        .cuento button {
+            background-color: #66cc66;
+            border: none;
+            padding: 10px 20px;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            font-size: 1em;
+            transition: background-color 0.3s;
+        }
+
+        .cuento button:hover {
+            background-color: #559955;
+        }
+
+        .pie {
+            background-color: #ffb3b3;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .parte {
+            margin-top: 20px;
+        }
+
+        .mensaje-buenas-noches {
+            background-color: #ffe4e1;
+            color: #333;
+            border: 2px solid #ffb3b3;
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 20px;
+            text-align: center;
+            font-size: 1.2em;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <header class="encabezado">
+        <h1>Para Monsesita, con mucho amor ❤️</h1>
+        <p>Un espacio mágico para cuentos interactivos antes de dormir.</p>
+    </header>
+
+    <main class="contenedor">
+        <section class="cuento">
+            <h2>El Bosque de los Sueños</h2>
+            <p>Un lugar mágico donde los árboles cuentan historias. <button onclick="mostrarParte('parte1')">Comienza</button></p>
+            <div id="parte1" class="parte" style="display: none;">
+                <p>Una vez dentro del bosque, escuchaste un susurro: "Elige el sendero izquierdo para una aventura o el derecho para un descanso mágico."</p>
+                <button onclick="mostrarParte('parte2a')">Sendero izquierdo</button>
+                <button onclick="mostrarParte('parte2b')">Sendero derecho</button>
+            </div>
+            <div id="parte2a" class="parte" style="display: none;">
+                <p>¡Te encontraste con un hada que te regaló polvo de estrellas! Ahora puedes volar. Fin del cuento 🌟</p>
+                <img src="img/hada.png" alt="Un hada mágica" style="width:100%; border-radius: 10px; margin-top: 10px;">
+                <div class="mensaje-buenas-noches">Buenas noches mi linda chica bonita, espero que descanses y pases una muy bonita noche. Te amo mucho, besos. ❤️</div>
+            </div>
+            <div id="parte2b" class="parte" style="display: none;">
+                <p>Descansaste bajo un árbol mágico y soñaste con un mundo lleno de colores pastel. Fin del cuento 🌸</p>
+                <img src="img/arbol_magico.png" alt="Un árbol mágico" style="width:100%; border-radius: 10px; margin-top: 10px;">
+                <div class="mensaje-buenas-noches">Buenas noches mi linda chica bonita, espero que descanses y pases una muy bonita noche. Te amo mucho, besos. ❤️</div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="pie">
+        <p>Con cariño, creado especialmente para Monsesita ❤️</p>
+    </footer>
+
+    <script>
+        function mostrarParte(id) {
+            document.querySelectorAll('.parte').forEach(parte => parte.style.display = 'none');
+            document.getElementById(id).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
